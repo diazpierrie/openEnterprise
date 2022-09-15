@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <title>Log In</title>
+    <title>Create a new password</title>
     <style>
       :root {
         --white: #ffffff;
@@ -44,6 +44,7 @@
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
+        justify-items: center;
       }
 
       .logo {
@@ -53,29 +54,19 @@
         display: none;
       }
 
-      .label {
-        font-size: var(--sm);
-        font-weight: bold;
-        margin-bottom: 4px;
-      }
-
-      .input {
-        background-color: var(--text-input-field);
-        border: none;
-        border-radius: 8px;
-        height: 30px;
-        font-size: var(--md);
-        padding: 6px;
-      }
-
-      .input-email {
-        margin-bottom: 22px;
-      }
-
-      .form {
-        display: flex;
-        flex-direction: column;
+      .title {
+        font-size: var(--lg);
         margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .subtitle {
+        color: var(--black);
+        font-size: var(--md);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: center;
       }
 
       .primary-button {
@@ -88,43 +79,40 @@
         font-size: var(--md);
         font-weight: bold;
         height: 50px;
-      }
-
-      .secondary-button {
-        background-color: white;
-        border-radius: 8px;
-        border: 1px solid aqua;
-        color: aqua;
-        width: 100%;
-        cursor: pointer;
-        font-size: var(--md);
-        font-weight: bold;
-        height: 50px;
-      }
-
-      .login-button {
-        margin-top: 14px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
 
       @media (max-width: 640px) {
         .logo {
           display: block;
         }
-
-        .signup-button {
-          position: absolute;
-          bottom: 20px;
-          width: 300px;
-        }
       }
 
-      .form a {
-        color: aqua;
+      .email-image {
+        height: 132px;
+        border-radius: 50%;
+        background-color: var(--text-input-field);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .email-image img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .resend {
         font-size: var(--sm);
-        text-align: center;
+      }
+
+      .resend span {
+        color: var(--black);
+      }
+
+      .resend a {
+        color: var(--black);
         text-decoration: none;
-        margin-bottom: 52px;
       }
     </style>
   </head>
@@ -132,32 +120,19 @@
     <div class="login">
       <div class="form-container">
         <img alt="logo" class="logo" src="./logos/Transparent Logo.png" />
+        <h1 class="title">Email has been sent</h1>
+        <p class="subtitle">
+          Please check your inbox for instructions on how to reset the password
+        </p>
 
-        <form action="/" class="form">
-          <label class="label" for="email">Email address</label>
-          <input
-            class="input input-email"
-            id="email"
-            placeholder="user@domain.com"
-            type="email"
-          />
-          <label class="label" for="password">Password</label>
-          <input
-            class="input input-password"
-            id="password"
-            placeholder="*********"
-            type="password"
-          />
-
-          <input
-            class="primary-button login-button"
-            type="submit"
-            value="Log In"
-          />
-
-          <a href="/">Forgot my password</a>
-          <button class="secondary-button signup-button">Sign up</button>
-        </form>
+        <div class="email-image">
+          <img alt="email" src="./icons/email.svg" />
+        </div>
+        <button class="primary-button" type="submit">Login</button>
+        <p class="resend">
+          <span>Didn't receive the email?</span>
+          <a href="/">Resend</a>
+        </p>
       </div>
     </div>
   </body>
