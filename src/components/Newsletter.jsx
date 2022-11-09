@@ -1,6 +1,6 @@
-import { Send } from "@mui/icons-material";
+import {Send} from "@mui/icons-material";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import {mobile} from "../responsive";
 
 const Container = styled.div`
   height: 60vh;
@@ -48,10 +48,10 @@ const Button = styled.button`
 const Newsletter = () => {
   return (
     <Container>
-      <Title>Newsletter</Title>
-      <Desc>Get timely updates from your favorite products.</Desc>
+      <Title>Noticias</Title>
+      <Desc>Recibi noticias sobre tus productos preferidos</Desc>
       <InputContainer>
-        <Input placeholder="Your email" />
+        <Input placeholder="Tu email" />
         <Button>
           <Send />
         </Button>

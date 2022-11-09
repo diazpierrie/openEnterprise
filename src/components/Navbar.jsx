@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Search, ShoppingCartOutlined } from "@mui/icons-material";
-import { Badge } from "@mui/material";
+import {Search, ShoppingCartOutlined} from "@mui/icons-material";
+import {Badge} from "@mui/material";
 
 const Container = styled.div`
   height: 60px;
@@ -75,8 +75,8 @@ const Navbar = () => {
           <Logo>Compras.</Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem>Registrarse</MenuItem>
+          <MenuItem>Logearse</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />

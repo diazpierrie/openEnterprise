@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
-import { useState } from "react";
-import { sliderItems } from "../data";
+import {ArrowLeftOutlined, ArrowRightOutlined} from "@mui/icons-material";
+import {useState} from "react";
+import {sliderItems} from "../data";
 
 const Container = styled.div`
   width: 100%;

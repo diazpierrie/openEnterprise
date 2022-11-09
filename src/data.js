@@ -40,7 +40,7 @@ export const categories = [
   },
 ];
 
-export const popularProducts = [
+export const productosPopulares = [
   {
     id: 1,
     img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1655831839-woven-crossbody-handbag-purse-kingto-1655831831.jpg?crop=1xw:1xh;center,top&resize=480:*",

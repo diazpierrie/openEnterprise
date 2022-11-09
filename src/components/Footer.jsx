@@ -1,14 +1,6 @@
-import {
-  Facebook,
-  Instagram,
-  MailOutline,
-  Phone,
-  Pinterest,
-  Room,
-  Twitter,
-} from "@mui/icons-material";
+import {Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter,} from "@mui/icons-material";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import {mobile} from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -79,19 +71,16 @@ const ContactItem = styled.div`
   align-items: center;
 `;
 
-const Payment = styled.img`
-  width: 50%;
-`;
-
 const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>LAMA.</Logo>
+        <Logo>Mercado.</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error
+          illum ipsum laudantium non officiis perferendis quidem soluta suscipit
+          voluptate. Aliquam, et exercitationem explicabo id ipsum laboriosam
+          repudiandae sit tempora!
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -109,33 +98,30 @@ const Footer = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Useful Links</Title>
+        <Title>Links utiles</Title>
         <List>
           <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
+          <ListItem>Carrito</ListItem>
+          <ListItem>Fashion Hombres</ListItem>
+          <ListItem>Fashion Mujeres</ListItem>
+          <ListItem>Accesorios</ListItem>
+          <ListItem>Mi cuenta</ListItem>
+          <ListItem>Tracking de ordenes</ListItem>
+          <ListItem>Lista de deseados</ListItem>
+          <ListItem>Terminos</ListItem>
         </List>
       </Center>
       <Right>
-        <Title>Contact</Title>
+        <Title>Contacto</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> 622 Dixie Path , South
-          Tobinchester 98336
+          <Room style={{ marginRight: "10px" }} /> Esmeralda 470 Piso 8, CABA
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: "10px" }} /> +1 234 56 78
+          <Phone style={{ marginRight: "10px" }} /> +54 9 11 9825 3422
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> contact@lama.dev
+          <MailOutline style={{ marginRight: "10px" }} /> contacto@mercado.com
         </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
   );
