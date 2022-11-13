@@ -27,16 +27,19 @@ export const categories = [
     id: 1,
     img: "https://img.freepik.com/free-photo/young-man-wearing-black-t-shirt_53876-94777.jpg?w=740&t=st=1667194817~exp=1667195417~hmac=cd8c7da29b41925c50dec76c70b209907531a2b35502f69e026172296c2b29cd",
     title: "REMERAS",
+    cat: "remera",
   },
   {
     id: 2,
     img: "https://upload.wikimedia.org/wikipedia/commons/d/da/Trousers-colourisolated.jpg",
     title: "PANTALONES",
+    cat: "pantalon",
   },
   {
     id: 3,
     img: "https://images.pexels.com/photos/977796/pexels-photo-977796.jpeg?cs=srgb&dl=pexels-simon-robben-977796.jpg&fm=jpg",
     title: "CAMPERAS",
+    cat: "campera",
   },
 ];
 

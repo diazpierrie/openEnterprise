@@ -3,8 +3,11 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
-import {mobile} from "../responsive";
-import {Add, Remove} from "@mui/icons-material";
+import { mobile } from "../responsive";
+import { Add, Remove } from "@mui/icons-material";
+import { useLocation } from "react-router";
+import { useEffect, useState } from "react";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div``;
 
@@ -116,13 +119,28 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data);
+      } catch (e) {}
+    };
+    getProduct();
+  });
+
   return (
     <Container>
       <Navbar />
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src={product.img} />
         </ImgContainer>
         <InfoContainer>
           <Title>Denim Jumpsuit</Title>
