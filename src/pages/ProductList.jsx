@@ -7,7 +7,7 @@ import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 import { mobile } from "../responsive";
 import { Container } from "@mui/material";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 
 const Title = styled.h1`
   margin: 20px;
@@ -51,11 +51,21 @@ const ProductList = () => {
     });
   };
 
+  function titleCase(str) {
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map(function (word) {
+        return word.replace(word[0], word[0].toUpperCase());
+      })
+      .join(" ");
+  }
+
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>{cat}</Title>
+      <Title>{titleCase(cat)}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filtrar productos:</FilterText>
@@ -67,14 +77,6 @@ const ProductList = () => {
             <Option>azul</Option>
             <Option>amarillo</Option>
             <Option>verde</Option>
-          </Select>
-          <Select name="size" onChange={handleFilters}>
-            <Option disabled>Talle</Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
           </Select>
         </Filter>
         <Filter>

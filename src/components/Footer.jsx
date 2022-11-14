@@ -1,6 +1,13 @@
-import {Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter,} from "@mui/icons-material";
+import {
+  Facebook,
+  Instagram,
+  MailOutline,
+  Phone,
+  Room,
+  Twitter,
+} from "@mui/icons-material";
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -75,7 +82,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>Mercado.</Logo>
+        <Logo>futuroTech</Logo>
         <Desc>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error
           illum ipsum laudantium non officiis perferendis quidem soluta suscipit
@@ -86,14 +93,11 @@ const Footer = () => {
           <SocialIcon color="3B5999">
             <Facebook />
           </SocialIcon>
-          <SocialIcon color="E4405F">
-            <Instagram />
-          </SocialIcon>
           <SocialIcon color="55ACEE">
             <Twitter />
           </SocialIcon>
-          <SocialIcon color="E60023">
-            <Pinterest />
+          <SocialIcon color="E4405F">
+            <Instagram />
           </SocialIcon>
         </SocialContainer>
       </Left>
@@ -102,8 +106,8 @@ const Footer = () => {
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Carrito</ListItem>
-          <ListItem>Fashion Hombres</ListItem>
-          <ListItem>Fashion Mujeres</ListItem>
+          <ListItem>Audio</ListItem>
+          <ListItem>Video</ListItem>
           <ListItem>Accesorios</ListItem>
           <ListItem>Mi cuenta</ListItem>
           <ListItem>Tracking de ordenes</ListItem>
@@ -120,7 +124,8 @@ const Footer = () => {
           <Phone style={{ marginRight: "10px" }} /> +54 9 11 9825 3422
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> contacto@mercado.com
+          <MailOutline style={{ marginRight: "10px" }} />{" "}
+          contacto@futurotech.com
         </ContactItem>
       </Right>
     </Container>

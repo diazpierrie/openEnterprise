@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {Search, ShoppingCartOutlined} from "@mui/icons-material";
-import {Badge} from "@mui/material";
+import { Search, ShoppingCartOutlined } from "@mui/icons-material";
+import { Badge } from "@mui/material";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { logout } from "../redux/userRedux";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
   height: 60px;
@@ -61,27 +65,52 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const user = useSelector((state) => state.user.currentUser);
+  const quantity = useSelector((state) => state.cart.quantity);
+  const dispatch = useDispatch();
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
+          <Language>ES</Language>
           <SearchContainer>
             <Input />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Compras.</Logo>
+          <Logo>futuroTech</Logo>
         </Center>
         <Right>
-          <MenuItem>Registrarse</MenuItem>
-          <MenuItem>Logearse</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+          {!user && (
+            <Link
+              to="/register"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>Registrarse</MenuItem>
+            </Link>
+          )}
+          {!user && (
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>Logearse</MenuItem>
+            </Link>
+          )}
+          {user && (
+            <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+              <MenuItem onClick={() => dispatch(logout())}>Logout</MenuItem>
+            </Link>
+          )}
+
+          <Link to="/Cart">
+            <MenuItem>
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>

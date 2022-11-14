@@ -1,23 +1,23 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://img.freepik.com/premium-photo/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone_8087-3877.jpg?w=2000",
-    title: "DESCUENTOS DE VERANO",
-    desc: "COMPRA ANTES DE QUE SEA TARDE",
+    img: "https://img.freepik.com/free-photo/photo-bearded-hipster-guy-looks-away-with-surprised-wondered-look-dressed-red-sweatshirt-sees-something-unbelievable-uses-headphones-isolated-rosy-pastel-wall-copy-space-aside_273609-42397.jpg?w=2000",
+    title: "DESCUENTOS DE PRIMAVERA",
+    desc: "APROVECHA UN 30% OFF EN AURICULARES",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://img.freepik.com/free-photo/two-beautiful-women-shopping-town_1303-16426.jpg?w=2000",
-    title: "DESCUENTOS DE INVIERNO",
-    desc: "COMPRA ANTES DE QUE SEA TARDE",
+    img: "https://media.istockphoto.com/id/1225797532/es/foto/retrato-de-un-joven-barbudo-con-ropa-deportiva-y-auriculares-inal%C3%A1mbricos.jpg?s=1024x1024&w=is&k=20&c=Njb6US25V1wMcB1EGAM8A0IuaQKMVHHSj1-MTe8uDw4=",
+    title: "NUEVA TECNOLOGIA IN-EAR",
+    desc: "LA MEJOR SUPRESION DE SONIDO DEL MERCADO",
     bg: "fcf1ed",
   },
   {
     id: 3,
-    img: "https://img.freepik.com/free-photo/girl-holds-fashion-shopping-bag-beauty_1150-13673.jpg?w=2000",
-    title: "DESCUENTOS DE PRIMAVERA",
-    desc: "COMPRA ANTES DE QUE SEA TARDE",
+    img: "https://www.digital-storeweb.com.ar/wp-content/uploads/sites/18/2019/10/Camara-Deportiva-Sumergible-GearPro-Hd.jpg",
+    title: "NUEVAS CAMARAS SUMERGIBLES",
+    desc: "SOPORTE DE HASTA 30 METROS DE PROFUNDIDAD",
     bg: "fbf0f4",
   },
 ];
@@ -25,55 +25,20 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://img.freepik.com/free-photo/young-man-wearing-black-t-shirt_53876-94777.jpg?w=740&t=st=1667194817~exp=1667195417~hmac=cd8c7da29b41925c50dec76c70b209907531a2b35502f69e026172296c2b29cd",
-    title: "REMERAS",
-    cat: "remera",
+    img: "https://images.pexels.com/photos/374777/pexels-photo-374777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "AURICULARES",
+    cat: "auricular",
   },
   {
     id: 2,
-    img: "https://upload.wikimedia.org/wikipedia/commons/d/da/Trousers-colourisolated.jpg",
-    title: "PANTALONES",
-    cat: "pantalon",
+    img: "https://images.pexels.com/photos/9885568/pexels-photo-9885568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "CAMARAS",
+    cat: "camara",
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/977796/pexels-photo-977796.jpeg?cs=srgb&dl=pexels-simon-robben-977796.jpg&fm=jpg",
-    title: "CAMPERAS",
-    cat: "campera",
-  },
-];
-
-export const productosPopulares = [
-  {
-    id: 1,
-    img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1655831839-woven-crossbody-handbag-purse-kingto-1655831831.jpg?crop=1xw:1xh;center,top&resize=480:*",
-  },
-  {
-    id: 2,
-    img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/021/598/products/tote-impermeable-bordo-sin-tiras-011-a97728342f5dc469dd16475388589681-1024-1024.jpg",
-  },
-  {
-    id: 3,
-    img: "https://m.media-amazon.com/images/I/71Ud08PxdQL._AC_UY500_.jpg",
-  },
-  {
-    id: 4,
-    img: "https://d5g6qrhuv2sn8.cloudfront.net/catalog/product/cache/7d6977a2ec7c2a93738e7f9002fdf582/1/e/1e2e6d8187bfd841cf3673a3895a0283_11.jpg",
-  },
-  {
-    id: 5,
-    img: "https://bhsh.widen.net/content/n6l0yeuw3v/jpeg/760-002.jpg?w=700&h=700&quality=80&keep=s&crop=no",
-  },
-  {
-    id: 6,
-    img: "https://images.arcteryx.com/S22/1350x1710/Acrople-Jacket-Canvas.jpg",
-  },
-  {
-    id: 7,
-    img: "https://www.collinsdictionary.com/images/full/shirt_378037390_1000.jpg",
-  },
-  {
-    id: 8,
-    img: "https://http2.mlstatic.com/D_NQ_NP_754054-MLA51360661796_082022-W.jpg",
+    img: "https://images.pexels.com/photos/11712822/pexels-photo-11712822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "DRONES",
+    cat: "drone",
   },
 ];

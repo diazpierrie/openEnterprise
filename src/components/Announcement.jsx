@@ -12,7 +12,11 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return <Container>Descuentos</Container>;
+  return (
+    <Container>
+      Descuentos de primavera! Aprovecha un 30% off en auriculares
+    </Container>
+  );
 };
 
 export default Announcement;

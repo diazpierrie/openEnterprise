@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { mobile } from "../responsive";
+import { useState } from "react";
+import { login } from "../redux/apiCalls";
+import { useDispatch, useSelector } from "react-redux";
 
 const Container = styled.div`
   width: 100vw;
@@ -8,7 +11,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://images.pexels.com/photos/907526/pexels-photo-907526.jpeg")
       center;
   background-size: cover;
   display: flex;
@@ -48,6 +51,10 @@ const Button = styled.button`
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  &:disabled {
+    color: green;
+    cursor: not-allowed;
+  }
 `;
 
 const Link = styled.a`
@@ -57,15 +64,40 @@ const Link = styled.a`
   cursor: pointer;
 `;
 
+const Error = styled.span`
+  color: red;
+`;
+
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log({ username, password });
+    login(dispatch, { username, password });
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>Logearse</Title>
         <Form>
-          <Input placeholder="usuario" />
-          <Input placeholder="password" />
-          <Button>Logearse</Button>
+          <Input
+            placeholder="usuario"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            placeholder="password"
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button onClick={handleClick} disabled={isFetching}>
+            Logearse
+          </Button>
+          {error && <Error> Something went wrong....</Error>}
           <Link>Me olvide mi contraseña</Link>
           <Link>Crear una cuenta nueva</Link>
         </Form>

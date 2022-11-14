@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -64,8 +64,8 @@ const Register = () => {
           <Input placeholder="apellido" />
           <Input placeholder="usuario" />
           <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirmar password" />
+          <Input type="password" placeholder="password" />
+          <Input type="password" placeholder="confirmar password" />
           <Agreement>
             Al crear una cuenta, doy consentimiento de mis datos personales de
             acuerdo a las <b>politicas de privacidad</b>
