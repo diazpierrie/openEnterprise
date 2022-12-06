@@ -4,11 +4,12 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 import { Add, Remove } from "@mui/icons-material";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router-dom";
+import {emptyCart} from "../redux/cartRedux";
 
 const Container = styled.div``;
 
@@ -82,16 +83,12 @@ const Details = styled.div`
 
 const ProductName = styled.span``;
 
-const ProductId = styled.span``;
-
 const ProductColor = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: ${(props) => props.color};
 `;
-
-const ProductSize = styled.span``;
 
 const PriceDetail = styled.div`
   flex: 1;
@@ -162,6 +159,7 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const onToken = (token) => {
     setStripeToken(token);
@@ -175,10 +173,11 @@ const Cart = () => {
           amount: cart.total * 100,
         });
         history.push("/success", { data: res.data });
+        dispatch(emptyCart());
       } catch (e) {}
     };
     stripeToken && makeRequest();
-  }, [stripeToken, cart.total, history]);
+  }, [stripeToken, cart.total, history, dispatch]);
 
   return (
     <Container>
@@ -204,13 +203,7 @@ const Cart = () => {
                     <ProductName>
                       <b>Producto:</b> {product.title}
                     </ProductName>
-                    <ProductId>
-                      <b>ID:</b> {product.id}
-                    </ProductId>
                     <ProductColor color={product.color} />
-                    <ProductSize>
-                      <b>Talle:</b> {product.size}
-                    </ProductSize>
                   </Details>
                 </ProductDetail>
                 <PriceDetail>
