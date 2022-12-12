@@ -82,27 +82,27 @@ const Navbar = () => {
           <Logo>futuroTech</Logo>
         </Center>
         <Right>
-          {!user && (
+          {!user ? (
             <Link
               to="/register"
               style={{ textDecoration: "none", color: "black" }}
             >
               <MenuItem>Registrarse</MenuItem>
             </Link>
-          )}
-          {!user && (
+          ) : null}
+          {!user ? (
             <Link
               to="/login"
               style={{ textDecoration: "none", color: "black" }}
             >
               <MenuItem>Logearse</MenuItem>
             </Link>
-          )}
-          {user && (
+          ) : null}
+          {user ? (
             <Link to="/" style={{ textDecoration: "none", color: "black" }}>
               <MenuItem onClick={() => dispatch(logout())}>Logout</MenuItem>
             </Link>
-          )}
+          ) : null}
 
           <Link to="/Cart">
             <MenuItem>
